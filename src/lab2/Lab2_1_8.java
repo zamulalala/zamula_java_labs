@@ -8,7 +8,7 @@ import java.time.LocalDate;
 import java.util.Date;
 import java.util.Scanner;
 
-public class lab2_1_8 {
+public class Lab2_1_8 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         System.out.println("Input words and press Enter: ");
@@ -58,6 +58,7 @@ public class lab2_1_8 {
     }
 
     public static void printInfo() {
+        System.out.println("************************");
         System.out.println("Разработчик: Замула М.И.");
 
         System.out.println("Дата получения задания: " + LocalDate.of(2023, 1, 17));

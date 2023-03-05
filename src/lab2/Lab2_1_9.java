@@ -5,7 +5,7 @@ package lab2;
 
 import java.util.Scanner;
 
-import static lab2.lab2_1_8.printInfo;
+import static lab2.Lab2_1_8.printInfo;
 
 public class Lab2_1_9 {
     public static void main(String[] args) {
