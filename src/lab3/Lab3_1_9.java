@@ -11,6 +11,7 @@ public class Lab3_1_9 {
         System.out.println("Минимальный корень = " + String.format("%.4f", findMinRoot(array)));
     }
 
+
     public static double findMaxRoot(QuadraticEquation[] array) {
         double currentMaxRoot = Double.NEGATIVE_INFINITY;
 
