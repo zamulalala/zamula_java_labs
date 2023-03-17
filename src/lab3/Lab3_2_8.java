@@ -13,7 +13,7 @@ public class Lab3_2_8 {
                 new Car(4, "Ford", "Focus", 2015, "Grey", 1.3, "C223OT77"),
                 new Car(5, "Ford", "Explorer", 2021, "Black", 3.5, "A777AA77"),
                 new Car(6, "Toyota", "Camry", 2010, "White", 1.7, "P482CX77"),
-                new Car(3, "Toyota", "Camry", 2010, "Green", 1.9, "K911EC77"),
+                new Car(7, "Toyota", "Camry", 2010, "Green", 1.9, "K911EC77"),
         };
 
         List<Car> fords = listMarks(cars, "Ford");
