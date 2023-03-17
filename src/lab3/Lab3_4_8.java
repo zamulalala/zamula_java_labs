@@ -2,37 +2,45 @@ package lab3;
 
 public class Lab3_4_8 {
     public static void main(String[] args) {
-        Admin admin = new Admin();
+        Dispatcher dispatcher = new Dispatcher();
 
-        // добаляю товары
-        OnlineProduct p1 = new OnlineProduct("iPhone 13", "Smartphone Apple", 999.99);
-        OnlineProduct p2 = new OnlineProduct("Samsung Galaxy S21", "Smartphone Samsung", 799.99);
-        admin.addProduct(p1);
-        admin.addProduct(p2);
+        Driver d1 = new Driver("Rita");
+        Driver d2 = new Driver("MyCar");
+        Driver d3 = new Driver("Nargiz");
 
-        // создаю клиентов
-        Customer c1 = new Customer("Rita", "rita@gmail.com");
-        Customer c2 = new Customer("Mycar", "mycar@gmail.com");
+        dispatcher.addDriver(d1);
+        dispatcher.addDriver(d2);
+        dispatcher.addDriver(d3);
 
-        // добавляю товары в корзину клиентов
-        c1.addToCart(p1);
-        c2.addToCart(p2);
-        c2.addToCart(p1);
+        CarForAutobase c1 = new CarForAutobase("Ford", "Galaxy", 2008);
+        CarForAutobase c2 = new CarForAutobase("Renaut", "Logan", 2012);
+        CarForAutobase c3 = new CarForAutobase("Audi", "TT", 2015);
 
-        // оформляю заказы и производим оплату
-        c1.checkout();
-        c2.checkout();
+        dispatcher.addCar(c1);
+        dispatcher.addCar(c2);
+        dispatcher.addCar(c3);
 
-        // регистрирую продажи
-        admin.registerSale(c1.getCurrentOrder());
-        admin.registerSale(c2.getCurrentOrder());
+        //назначить водителя1 на автомобиль1
+        dispatcher.assignDriverToCar(d1, c1);
 
-        // добавляю неплательщика в черный список
-        admin.addCustomerToBlacklist(c1.getName());
+        //пометить поездку водителя1 как завершенную
+        dispatcher.markTripComplete(d1);
 
-        // проверяю, есть ли клиент в черном списке
-        System.out.println(admin.isCustomerBlacklisted(c1.getName())); // true
-        System.out.println(admin.isCustomerBlacklisted(c2.getName())); // false
+        //поставить машину водителя1 на ремонт
+        dispatcher.markDriverForRepair(d1);
+
+        //отстранить водителя1
+        dispatcher.suspendDriver(d1);
+
+        dispatcher.assignDriverToCar(d2, c2);
+
+        dispatcher.markTripComplete(d2);
+
+        dispatcher.suspendDriver(d2);
+
+        dispatcher.reinstateDriver(d2);
+
+        System.out.println(dispatcher.getDrivers());
+        System.out.println(dispatcher.getCars());
     }
-
 }
