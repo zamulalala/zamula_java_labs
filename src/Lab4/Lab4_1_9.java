@@ -1,4 +1,4 @@
-package lab3;
+package Lab4;
 
 import java.util.List;
 
