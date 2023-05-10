@@ -1,4 +1,4 @@
-package Lab4;
+package lab4;
 
 public class Computer {
     private String name;

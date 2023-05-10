@@ -1,4 +1,4 @@
-package Lab5;
+package lab5;
 
 public class Complex {
     private final double real;
